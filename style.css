@@ -13,6 +13,7 @@ body {
   overflow: hidden;
   
   
+  
 }
 
 h1{
@@ -74,7 +75,7 @@ input[type="text"] {
 
 #sprite-btn{
   height: 50px;
-  width: 70px;
+  width: 73px;
   border-radius: 40%;
   background-color: rgba(255, 255, 255, 0.1); 
   margin-top: 10px;
@@ -160,6 +161,68 @@ button {
 
 .bouncing {
   animation: bounce 0.6s infinite;
+}
+
+/*looks decent on small screens*/
+@media screen and (max-width: 768px) {
+
+  #change-color-btn {
+      position: absolute;
+      transform: translate(-39%, 59%);
+      z-index: 2;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+  }
+  #sprite-btn {
+      height: 50px;
+      width: 73px;
+      border-radius: 40%;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-top: 10px;
+      letter-spacing: 2px;
+      text-align: center;
+      position: relative;
+      top: 43px;
+      right: 36%;
+  }
+
+  label[for="pokemonName"] {
+      color: white;
+      letter-spacing: 2px;
+      margin-top: 20px;
+      position: relative;
+      top: -46px;
+      right: -13%;
+  }
+
+  input[type="text"] {
+      width: 200px;
+      padding: 10px;
+      margin: 10px;
+      border: 5px solid #000000;
+      border-radius: 50px;
+      font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.1);
+      letter-spacing: 2.2px;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+      top: -15%;
+      right: 4%;
+  }
+
+  .dynamic-container {
+      height: 90px;
+      overflow: hidden;
+      position: relative;
+      transform: translate(1%, 288%);
+  }
+  #pokemonSpriteContainer {
+      margin-top: -42px;
+  }
+   
 }
 
 

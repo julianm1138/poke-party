@@ -5,7 +5,7 @@ async function fetchPokemonSprite() {
   
   pokemonSpriteContainer.innerHTML = '';
   pokemonSpriteContainer.classList.remove('animated', 'bouncing');
-  //remove the animated and bouncing classes to make sure we start from the initial animation state when a new spriate is loaded
+  //remove the animated and bouncing classes to make sure we start from the initial animation state when a new sprite is loaded
 
   try {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
