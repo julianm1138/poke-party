@@ -1,0 +1,33 @@
+{
+  "name": "my-pokemon-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "convert": "^5.8.0",
+    "convert-units": "^2.3.4",
+    "lodash": "^4.17.21",
+    "mathjs": "^14.3.1",
+    "pinia": "^3.0.1",
+    "vue": "^3.5.13",
+    "vue3-colorpicker": "^2.3.0",
+    "vuedraggable": "^2.24.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.15",
+    "@types/convert-units": "^2.3.11",
+    "@types/lodash": "^4.17.16",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "tailwindcss": "^4.0.15",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vue-tsc": "^2.2.8"
+  }
+}

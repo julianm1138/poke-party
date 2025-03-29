@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+@keyframes flash {
+  30%,
+  20% {
+    background-color: rgba(255, 255, 0, 0.5);
+  }
+  80% {
+    background-color: rgba(255, 255, 244, 0.792);
+  }
+  0%,
+  60% {
+    background-color: rgba(255, 255, 0, 0.7);
+  }
+}
+.animate-flash {
+  animation: flash 0.5s ease-in-out;
+}
+
+@keyframes customBounce {
+  0% {
+    transform: translate(0, 4px);
+  }
+  25% {
+    transform: translate(0, -4px);
+  }
+  50% {
+    transform: translate(0, 4px);
+  }
+  75% {
+    transform: translate(0, 4px);
+  }
+  100% {
+    transform: translate(0, 4px);
+  }
+}
+
+.animate-custom-bounce {
+  animation: customBounce 0.5s infinite;
+  animation-fill-mode: both;
+}
