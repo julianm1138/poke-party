@@ -89,7 +89,7 @@ watch(searchQuery, fetchSuggestions);
     class="flex flex-col justify-center items-center gap-4 text-lg tracking-widest"
   >
     <input
-      class="text-white bg-gray bg-opacity-10 w-[300px] p-[10px] border-black border-[5px] rounded-full bg-gray-700 tracking-widest"
+      class="text-white bg-gray bg-opacity-10 w-[120%] sm:w-[100%] lg:w-[340px] lg:-translate-x-[148px] p-[10px] border-black border-[5px] rounded-full bg-gray-700 tracking-widest"
       type="text"
       aria-label="Enter Pokémon name into the search bar"
       v-model="searchQuery"
@@ -99,17 +99,17 @@ watch(searchQuery, fetchSuggestions);
       spellcheck="false"
     />
     <div
-      class="flex flex-col absolute top-[70px] right-[30px] h-[100px] w-[180px]"
+      class="flex flex-col absolute -translate-y-[-69px] -translate-x-[5px] sm:left-[26%]"
     >
       <img
-        class="flex justify-center h-[120px] w-[120px] animate-custom-bounce"
+        class="flex justify-center h-[130px] w-[130px] sm:h-[100px] sm:w-[110px] lg:w-[170px] lg:h-[170px] lg:-translate-x-[145px] sm:mt-5 animate-custom-bounce"
         v-if="pokemonSprite"
         :src="pokemonSprite"
         alt="Pokemon sprite"
       />
     </div>
     <button
-      class="text-white text-sm bg-opacity-10 absolute top-[110px] left-[300px] w-[130px] p-[10px] border-black border-[5px] rounded-full bg-gray-700 tracking-widest cursor-pointer"
+      class="text-white text-sm bg-opacity-10 absolute top-[180px] left-[auto] sm:top-[45px] sm:right-[-90px] sm:-translate-y-[-42px] lg:-translate-y-[-95px] lg:-translate-x-[180px] w-[130px] p-[10px] border-black border-[5px] rounded-full bg-gray-700 tracking-widest cursor-pointer"
       @click="addSpriteToParty"
       v-if="!isButtonHidden"
     >
@@ -120,7 +120,7 @@ watch(searchQuery, fetchSuggestions);
   <ul
     v-if="suggestions.length"
     :style="{ backgroundColor: globalStore.color, opacity: 0.8 }"
-    class="fixed max-h-[150px] text-2xl overflow-y-auto text-gray-100 rounded-lg shadow-lg mt-2 w-[300px]"
+    class="fixed max-h-[150px] text-xl overflow-y-auto text-gray-100 rounded-lg shadow-lg mt-2 w-[230px] lg:w-[338px] lg:right-[145px] tracking-widest"
   >
     <li
       v-for="(suggestion, index) in suggestions"

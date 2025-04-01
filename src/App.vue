@@ -40,29 +40,32 @@ const flashBtn = () => {
     style="background-image: url('/background-img.jpeg')"
   >
     <h1
-      class="text-8xl text-gray-200 font-semibold tracking-wider absolute bottom-[65%]"
+      class="text-4xl text-gray-200 font-semibold tracking-wider transform -translate-x-1/2 -translate-y-1/2 absolute bottom-[53%] left-[51%] lg:text-8xl"
     >
       PokéParty
     </h1>
-
     <button
       @click="
         flashBtn();
         handleGo();
       "
       :class="{ 'animate-flash': isFlashing }"
-      class="text-3xl font-extrabold tracking-widest justify-center absolute left-[724px] bottom-[290px] items-center text-gray-200 rounded-full w-[110px] h-[110px] cursor-pointer"
+      class="text-xl font-extrabold tracking-widest justify-center items-center absolute left-1/2 top-1/2 transform -translate-x-[39%] -translate-y-[44%] sm:-translate-x-[36%] sm:-translate-y-[49%] md:-translate-x-[26%] md:-translate-y-[49%] lg:-translate-x-[39%] lg:-translate-y-[46%] text-gray-200 rounded-full w-[70px] h-[70px] cursor-pointer sm:w-[40px] sm:h-[40px] sm:text-xl lg:text-3xl lg:h-[110px] lg:w-[109px]"
     >
       Go!
     </button>
   </div>
-  <div class="absolute top-[65%] right-[40%]">
+  <div
+    class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[-70px] sm:-translate-y-[-25px] lg:-translate-y-[-80px] lg:-translate-x-[16px]"
+  >
     <Search ref="searchRef" />
   </div>
-  <Party class="absolute top-[14%] right-[3%]" />
+  <div class="absolute top-[2%] right-[10%] sm:right-[1%]">
+    <Party />
+  </div>
   <ColorButton
     @changeColor="handleColorChange"
-    class="absolute top-[5%] right-[9%]"
+    class="absolute transform -translate-x-1/2 -translate-y-1/2 top-[213.5px] right-[-13%] sm:right-[26%] sm:top-[4%]"
   />
 </template>
 <style></style>

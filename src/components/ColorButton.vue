@@ -14,7 +14,7 @@ const generateRandomColor = () => {
 <template>
   <button
     @click="generateRandomColor"
-    class="text-white text-md tracking-widest bg-gray-700 w-[220px] p-[5px] border-black border-[2px] rounded-full cursor-pointer"
+    class="text-white text-xs sm:w-[160px] lg:text-md lg:w-[180px] tracking-widest bg-gray-700 h-[27px] w-[174px] p-[4px] border-black border-[3px] rounded-full cursor-pointer"
   >
     Change color scheme
   </button>

@@ -10,18 +10,20 @@ const globalStore = usePokemonStore();
 <template>
   <div
     :style="{ backgroundColor: globalStore.color, opacity: 1 }"
-    class="flex flex-col items-center text-white h-[560px] w-[450px] bg-[#500020] py-4 absolute -top-[2%] right-[63rem] font-extrabold rounded-md tracking-widest"
+    class="z-10 flex flex-col items-center text-white h-[400px] w-[320px] sm:h-[350px] sm:w-[250px] lg:w-[490px] lg:h-[605px] py-5 absolute right-[-7px] top-[132%] sm:right-[204%] sm:top-[1%] md:translate-x-[100px] lg:top-[2px] lg:right-[1007px] lg:translate-x-[0px] font-extrabold rounded-md tracking-widest"
   >
-    <h1 class="text-5xl font-bold mt-5">
+    <h1 class="text-3xl font-bold mt-1 lg:text-5xl">
       {{ _.startCase(globalStore.currentPokemon?.name || "Unknown Pokémon") }}
     </h1>
     <img
       v-if="globalStore.currentPokemon?.sprites?.front_default"
       :src="globalStore.currentPokemon.sprites.front_default"
       alt="pokemon sprite"
-      class="h-[270px] w-[270px]"
+      class="h-[120px] w-[125px] lg:h-[240px] lg:w-[240px]"
     />
-    <div class="flex flex-row gap-12 mt-5">
+    <div
+      class="flex flex-row items-start gap-8 px-4 text-[11px] text-base/8 sm:text-base/7 sm:gap-4 sm:text-[8px] lg:text-[14px] lg:gap-20 lg:text-base/11"
+    >
       <div
         v-if="globalStore.currentPokemon?.types"
         class="flex flex-col items-start"
